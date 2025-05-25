@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Webprojekt</title>
+  </head>
+  <body>
+    <div class="top">
+    <h1 id="top">Das ist die H1 mit der id top</h1>
+    <p>Durch die id kann man mit einem Link an diese Stelle springen und die Überschrift rot stylen.
+      <br>Der Absatz in Header ist weiß, der Hintergrund blau.
+    </p>
+    </div>
+    <h2>Headline 2 Grundlegende Selektoren</h2>
+    <p class="description">Ein Absatz mit der Klasse 'description'.
+      Dadurch wird er grün. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+    </p>
+    <p>Ein allgemeiner Absatz ohne Klasse. Der hat die Farbe schwarz. Lorem ipsum dolor sit amet, conseetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+      At vero eos et accusam et justo duo dolores et ear rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+
+    
+    <h2>Erweiterte Selektoren</h2>
+    <p>Ein Beispiel für den :not()-Pseudo-Selektor.</p>
+    <div class="selectors">
+    <p>Ein Absatz innerhalb eines div (Kind-Selektor >).</p>
+    <p>Ein benachbarter Absatz (Nachfolger-Selektor +).</p>
+    <p id="sibling-selector">Ein Geschwister-Absatz (Geschwister-Selektor ~).</p>
+    </div>
+
+    <h2>Pseudo-Selektoren</h2>
+    <div class="children">
+    <p>Erster Absatz in einem Bereich (erster Kind-Absatz).</p>
+    <p class="hover-effect">Zweiter Absatz, der auf Hover-Effekte reagiert.</p>
+    <p>Letzter Absatz in einem Bereich (letztes Kind).</p>
+    </div>
+    
+    <footer>
+      <p>Der Text im footer ist weiß, der Hintergrund ist grau.
+        <br>Der Link ist unterstrichen und weiß, wenn man mit der Maus drüberfährt, wird er rot!
+      </p>
+      <p><a href="#top">Ich bin ein Link zum Anker top</a></p>
+      <p>© 2023 Erweiterte CSS Selektoren Demonstration</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML5 Video Player</title>
+  <meta name="description" content="HTML5 Video Player">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body id="body">
+<div class="wrapper">
+	<h1>HTML5 Video Player</h1>
+	<p>Clips von <a href="https://test-videos.co.uk/" target="_blank">https://test-videos.co.uk/</a></p>
+	<div class="video-container">
+		<video width="640" height="360" controls autoplay muted id="video-player">
+			<source src="video/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4">
+			<track src="subtitles/st_de.vtt" label="Deutsch" kind="subtitles" srclang="de" default>
+			<track src="subtitles/st_en.vtt" label="English" kind="subtitles" srclang="en">
+		</video>
+	</div>
+	<h2>Optionen</h2>
+	<ul>
+		<li>width/height: wie bei img - für responsive Video besser über CSS</li>
+		<li>controls: Steuerelemente einblenden</li>
+		<li>autoplay: Sofort starten (wird auf mobilen Geräten oft ignoriert!)</li>
+		<li>muted: Ton ausschalten (damit funktioniert autoplay meist auch mobil) </li>
+		<li>loop: Automatische Wiederholung</li>
+		<li>playsinline: Video wird in der Webseite abgespiels, sonst oft in eigenem Player (iOS)</li>
+		<li>poster: Vorschaubild anzeigen wenn nicht autoplay (poster="/images/preview.gif")</li>
+		<li>preload: Vorgabe fürs Laden wenn nicht autoplay (poster="none|auto|metadata")</li>
+		<li>Untertitel über track-Tag einbauen mit externer Datei (funktioniert lokal nicht!)</li>
+	</ul>
+	<h2>Responsive CSS</h2>
+	<h3>Für moderne Browser</h3>
+	<pre>
+video {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16/9;
+}
+	</pre>
+	<h3>Alte Methode</h3>
+	<pre>
+.video-container {
+	position: relative;
+	width: 100%
+	height: 0;
+	padding-bottom: 56.25%;
+}
+.video-container video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+	</pre>
+	<h2>Video Player mit JavaScript</h2>
+	<p>Mit Java Script kann der Player gesteuert und auf Events reagiert werden.</p>
+	<h3>Funktionen</h3>
+	<ul>
+		<li>load()</li>
+		<li>play()</li>
+		<li>pause()</li>
+	</ul>
+	<h3>Eigenschaften</h3>
+	<ul>
+		<li>currentTime: Zeit abfrage oder setzen</li>
+		<li>duration: Länge des Clips abfragen</li>
+	</ul>
+	<h3>Beispiel Code Events</h3>
+	<pre>
+const videoPlayer = document.getElementById('video-player');
+videoPlayer.addEventListener('play', (event) => {
+	console.log('clip playing');
+});
+// alternative schreibweise
+videoPlayer.onPause = (event) => {
+	console.log('clip paused - event info: ' + event);
+};
+videoPlayer.addEventListener('ended', (event) => {
+	console.log('end of clip reached');
+});
+	</pre>
+	<p><a href="https://www.w3schools.com/tags/ref_av_dom.asp" target="_blank">HTML Audio and Video DOM Reference</a></p>
+</div> <!-- end wrapper -->
+<script>
+	const videoPlayer = document.getElementById('video-player');
+	videoPlayer.addEventListener('play', () => {
+		console.log('clip playing');
+	});
+	// alternative schreibweise
+	videoPlayer.onpause = (event) => {
+		console.log('clip paused');
+		console.log(event);
+	};
+	videoPlayer.addEventListener('ended', () => {
+		console.log('end of clip reached');
+	});
+</script>
+</body>
+</html>

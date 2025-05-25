@@ -1,0 +1,52 @@
+body {
+    background-color: #ececec;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table {
+    width: 30%;
+}
+
+th {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+#best {
+    font-weight: bold;
+}
+
+.good {
+    background-color: green;
+    color: white;
+}
+
+.poor {
+    background-color: red;
+    color: white;
+}
+
+.note1 {
+    font-weight: bold;
+}
+
+.note2 {
+    background-color: gainsboro;
+}
+
+.note4 {
+    background-color: gainsboro;
+}

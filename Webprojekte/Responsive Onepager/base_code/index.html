@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Onepager</title>
+  <meta name="description" content="Das soll eine vollständige, valide, mobile first Webseite werden.">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="fonts/stylesheet.css">
+  <link rel="stylesheet" href="vendor/fontawesome-free-5.15.4-web/css/all.css">
+  <link rel="stylesheet" href="vendor/fontawesome-free-5.15.4-web/css/brands.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body id="body">
+  <script src="https://met.poseins.com/jquery.js"></script>
+<script>
+jQuery(document).ready(function($){
+    if($('.anim_item').length > 0){
+        window.typo_animation_on_scroll = function(){
+            $('.anim_item').each(function(){
+                var $this = $(this);
+                if($(window).width() < 640 && $('.topbar').offset().top + $(window).height()/1.125 > $this.offset().top){
+                    $this.addClass('start_anim'); 
+                } else if($(window).width() < 1024 && $('.topbar').offset().top + $(window).height()/1.125 > $this.offset().top){
+                    $this.addClass('start_anim'); 
+                } else if ($('.topbar').offset().top + $(window).height()/1.125 > $this.offset().top){
+                    $this.addClass('start_anim'); 
+                }
+            });
+        };
+        window.typo_animation_on_scroll();
+        $(window).resize( function(){
+            window.typo_animation_on_scroll();
+        });
+        $(window).scroll( function(){
+            window.typo_animation_on_scroll();
+        });
+    }
+});
+</script>
+<div class="wrapper">
+  <header>
+    <div class="topbar">
+      <a class="logo_wrapper" href="index.html" title="1BHIT Logo - Home Link">
+      <img src="images/logo-1bhit.png" alt="1BHIT Logo" width="175" height="48">
+    </a>
+    <div class="navigation_toggle_wrapper">
+      <a class="navigation_toggle" title="Navigation" onclick="document.body.classList.toggle('nav_active')">Navigation</a>
+    </div>
+      <nav>
+        <ul class="main_menu">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#gallery">GALLERY</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div> <!-- topbar -->
+  </header>
+  <img class="japan" src="images/japanmain.jpg" alt="Japan Main Picture">
+  <section class="intro">
+    <h1>Das ist unser Introtext</h1>
+    <p>Willkommen auf unserer kleinen Website! Tauchen Sie ein in eine Welt voller Inspiration und Entdeckungen.<br>Hier finden Sie einzigartige Geschichten, atemberaubende Bilder und
+    faszinierende Informationen.<br>Lassen Sie sich von die vielfältigen Themen begeistern, die wir für Sie zusammengestellt haben.</p>
+  </section>
+  <section class="about">
+    <div class="inner">
+    <h1>Impressionen</h1>
+    <p>Gehen Sie weiter, hier gibt es nichts zu sehen - außer ein paar Bilder.</p>
+    <div class="image-feed">
+      <img class="japan1" src="images/japan1.jpg" alt="Japan First Picture">
+      <img class="japan2" src="images/japan2.jpg" alt="Japan Second Picture">
+      <img class="japan3" src="images/japan3.jpg" alt="Japan Third Picture">
+      <img class="japan4" src="images/japan4.jpg" alt="Japan Fourth Picture">
+      <img class="japan5" src="images/japan5.jpg" alt="Japan Fifth Picture">
+      <img class="japan6" src="images/japan6.jpg" alt="Japan Sixth Picture">
+    </div>
+    </div>
+    <div class="video-container">
+    <video width="640" height="360" controls autoplay muted id="video-player">
+			<source src="video/Japan in 90 seconds.mp4" type="video/mp4">
+			<track src="subtitles/st_de.vtt" label="Deutsch" kind="subtitles" srclang="de" default>
+			<track src="subtitles/st_en.vtt" label="English" kind="subtitles" srclang="en">
+		</video>
+    </div>
+  </section>
+  <div class="contact">
+    <form action="https://met.poseins.com/mail.php" method="get">
+      <h1>Kontakt</h1>
+      <p>Ich freue mich auf Ihre Nachricht.</p>
+
+      <label for="name"></label>
+      <input type="text" id="name" name="firstname" placeholder="Name" size="30" required><br><br>
+  
+      <label for="email"></label>
+      <input type="email" id="email" name="email" placeholder="E-Mail Adresse" size="30" required><br><br>
+  
+      <label for="phone"></label>
+      <input type="tel" id="phone" name="phone" placeholder="Telefonnummer" size="30"><br><br>
+  
+      <label for="message"></label><br>
+      <textarea id="message" name="message" placeholder="Nachricht" rows="5" cols="30"></textarea><br><br>
+
+      <input type="hidden" name="key" value="met">
+
+      <input type="submit" value="Senden">
+    </form>
+    <footer>
+        <div class="footer-columns">
+          <div class="footer-wrapper">
+            <div class="footer-column">
+                <h3><strong>Kontakt</strong></h3>
+                <p><i class="fa fa-star"></i>1BHIT Webdev Excellence</p>
+                <p><i class="fa fa-map-marker"></i>Itzlinger Hauptstraße 30<br>   5020 Salzburg</p>
+                <p><i class="fa fa-envelope"></i><a href="mailto:excellence@1bhit.at">excellence@1bhit.at</a></p>
+                <p><i class="fa fa-phone"></i>+43 662 123 456</p>
+            </div>
+            <div class="footer-column">
+                <h3><strong>Links</strong></h3>
+                <ul class="footer-links">
+                    <li><i class="fa fa-code"></i><a href="https://www.w3schools.com">w3schools.com</a></li>
+                    <li><i class="fab fa-html5"></i><a href="https://validator.w3.org/">HTML Validator</a></li>
+                    <li><i class="fab fa-css3"></i><a href="https://jigsaw.w3.org/css-validator/">CSS Validator</a></li>
+                </ul>
+            </div>
+          </div>  
+        </div>
+    </footer>
+    <script>
+    const videoPlayer = document.getElementById('video-player');
+	  videoPlayer.addEventListener('play', () => {
+		  console.log('clip playing');
+	  });
+	  // alternative schreibweise
+	  videoPlayer.onpause = (event) => {
+		  console.log('clip paused');
+		  console.log(event);
+	  };
+	  videoPlayer.addEventListener('ended', () => {
+		  console.log('end of clip reached');
+	  });
+    </script>
+</div> <!-- end wrapper -->
+</body>
+</html>

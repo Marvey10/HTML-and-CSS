@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('subset-SourceSansPro-Regular.eot');
+    src: local('Source Sans Pro'), local('SourceSansPro-Regular'),
+        url('subset-SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('subset-SourceSansPro-Regular.woff2') format('woff2'),
+        url('subset-SourceSansPro-Regular.woff') format('woff'),
+        url('subset-SourceSansPro-Regular.ttf') format('truetype'),
+        url('subset-SourceSansPro-Regular.svg#SourceSansPro-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('subset-SourceSansPro-SemiBold.eot');
+    src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'),
+        url('subset-SourceSansPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('subset-SourceSansPro-SemiBold.woff2') format('woff2'),
+        url('subset-SourceSansPro-SemiBold.woff') format('woff'),
+        url('subset-SourceSansPro-SemiBold.ttf') format('truetype'),
+        url('subset-SourceSansPro-SemiBold.svg#SourceSansPro-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Serif Pro';
+    src: url('subset-SourceSerifPro-Regular.eot');
+    src: local('Source Serif Pro'), local('SourceSerifPro-Regular'),
+        url('subset-SourceSerifPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('subset-SourceSerifPro-Regular.woff2') format('woff2'),
+        url('subset-SourceSerifPro-Regular.woff') format('woff'),
+        url('subset-SourceSerifPro-Regular.ttf') format('truetype'),
+        url('subset-SourceSerifPro-Regular.svg#SourceSerifPro-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Serif Pro';
+    src: url('subset-SourceSerifPro-SemiBold.eot');
+    src: local('Source Serif Pro SemiBold'), local('SourceSerifPro-SemiBold'),
+        url('subset-SourceSerifPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('subset-SourceSerifPro-SemiBold.woff2') format('woff2'),
+        url('subset-SourceSerifPro-SemiBold.woff') format('woff'),
+        url('subset-SourceSerifPro-SemiBold.ttf') format('truetype'),
+        url('subset-SourceSerifPro-SemiBold.svg#SourceSerifPro-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}

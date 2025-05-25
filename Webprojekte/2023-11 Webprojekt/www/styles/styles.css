@@ -1,0 +1,158 @@
+body {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-weight: 400;
+    color: #333;
+    background-color: #f0f0f0;
+}
+ 
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0;
+    background-color: #fff;
+    font-size: 1rem;
+}
+ 
+.content {
+    padding: 2rem;
+}
+ 
+h1,
+h2,
+h3 {
+    font-family: 'Source Serif Pro', "Times New Roman", Times, serif;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+ 
+h1 {
+    border-bottom: 1px solid #d94a31;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+ 
+h2 {
+    margin-bottom: 0.25rem;
+    font-size: 1.125rem;
+}
+ 
+h3 {
+    margin-bottom: 0.5rem;
+}
+ 
+p {
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+ 
+ul {
+    margin: 0 0 1rem 1.5rem;
+    padding: 0;
+}
+ 
+strong {
+    font-weight: 600;
+}
+ 
+a {
+    color: #d94a31;
+    text-decoration: none;
+}
+ 
+a:hover {
+    text-decoration: underline;
+}
+ 
+img {
+    width: 100%;
+    height: auto;
+}
+ 
+.content_more {
+    padding-top: 1rem;
+}
+ 
+.content_more ul {
+    margin-bottom: 0;
+}
+ 
+.content_gallery {
+    font-size: 0;
+    margin-bottom: 1rem;
+}
+ 
+.content_gallery_column {
+    display: inline-block;
+    width: 100%;
+}
+ 
+.footer {
+    color: #fff;
+    background-color: #d94a31;
+    text-align: center;
+}
+ 
+.footer p {
+    margin: 0;
+    line-height: 2rem;
+}
+
+h1 { font-size: 1.25rem; }
+
+@media screen and (min-width: 40em) { 
+    h1 { font-size: 1.5rem; }
+}
+@media screen and (min-width: 64em) {
+    h1 { font-size: 1.75rem; }
+}
+
+.wrapper {
+    width: 100%; max-width: 960px;
+    margin: 0; background-color: #fff;
+    font-size: 1rem;
+    }
+
+@media screen and (min-width: 60em) {
+    .wrapper {
+    margin: 2rem auto; border: 1px solid #333;
+    }
+}
+ 
+h1 {
+    border-bottom: 1px solid #d94a31;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+    
+h2 {
+    margin-bottom: 0.25rem;
+    font-size: 1.125rem;
+}
+    
+@media screen and (min-width: 40em) {
+    h1 {
+    font-size: 1.75rem;
+    }
+    h2 {
+    font-size: 1.5rem;
+    }
+}
+ 
+.content_gallery_column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+@media only screen and (max-width: 1023px) {
+    .content_gallery_column {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .content_gallery_column {
+        grid-template-columns: 100%;
+    }
+}
